@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  vpnconnection:
+    build: ./linux-fortissl
+    image: linux-fortissl:latest
+    privileged: true
+    restart: always
+    container_name: vpnconnection
+    ports:
+      - "22222:22222"
+      - "33389:33389"
+      - "55900:55900"
+      - "55985:55985"
+    environment:
+      - "VPNADDR=fortigate.example.com:8088"
+      - "VPNUSER=admin"
+      - "VPNPASS=password"
+      - "VPNRDPIP=172.20.1.30"

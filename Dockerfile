@@ -9,4 +9,7 @@ RUN apt-get update && \
 # Copy runfiles
 COPY start.sh /start.sh
 
+# Set permissions
+RUN chmod +x /start.sh
+
 CMD [ "/start.sh" ]

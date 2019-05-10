@@ -16,4 +16,5 @@ services:
       - "VPNADDR=fortigate.example.com:8088"
       - "VPNUSER=admin"
       - "VPNPASS=password"
-      - "VPNRDPIP=172.20.1.30"
+      - "HOSTIP=172.20.1.30"
+      - "VPNHASH=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
